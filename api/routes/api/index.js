@@ -1,6 +1,7 @@
 const router = require('express').Router()
 
-router.use('/', require('./gamification'))
+router.use('/gamification', require('./gamification'))
+router.use('/user', require('./user'))
 
 router.use(function (err, req, res, next) {
   if (err.name === 'ValidationError') {

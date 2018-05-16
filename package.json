@@ -5,7 +5,8 @@
     "postinstall": "cd api && npm install && cd .. && cd web && npm install",
     "client": "cd web && yarn start",
     "server": "cd api && nodemon server.js",
-    "build": "",
+    "server:prod": "cd api && nodemon server.js",
+    "build": "npm run client && npm run server",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "devDependencies": {

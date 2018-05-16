@@ -20,9 +20,9 @@ let oauth2Client
  * @param {function} callback The callback to call with the authorized client.
  */
 function authorize (credentials, callback) {
-  var clientSecret = credentials.installed.client_secret
-  var clientId = credentials.installed.client_id
-  var redirectUrl = credentials.installed.redirect_uris[0]
+  const clientSecret = credentials.installed.client_secret
+  const clientId = credentials.installed.client_id
+  const redirectUrl = credentials.installed.redirect_uris[0]
   oauth2Client = new OAuth2Client(clientId, clientSecret, redirectUrl)
 
   // Check if we have previously stored a token.
@@ -50,7 +50,7 @@ function getNewToken (oauth2Client, callback) {
     scope: SCOPES
   })
   console.log('Authorize this app by visiting this url: ', authUrl)
-  var rl = readline.createInterface({
+  const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
   })

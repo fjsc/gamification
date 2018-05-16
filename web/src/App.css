@@ -26,3 +26,10 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.App-planet {
+  padding:20px;
+  border:1px solid white;
+  border-radius: 50%;
+  animation: App-logo-spin infinite 1s linear;
+}

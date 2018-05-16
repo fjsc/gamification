@@ -1,11 +1,11 @@
-const init = require('./google')
+const googleClient = require('./google')
 const { google } = require('googleapis')
 
 const spreadsheetId = '1g2cC3WD49qyh68svx0VJAWWHrfs6X4YJovUTIRZj5e4'
 const sheets = google.sheets('v4')
 
 function getAll (callback) {
-  init((auth) => {
+  googleClient((auth) => {
     sheets.spreadsheets.values.get({
       auth,
       spreadsheetId,
